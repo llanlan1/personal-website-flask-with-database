@@ -91,7 +91,10 @@
     }
 
     a {
-        text-decoration: none;
+        text-decoration: underline;
+        text-decoration-thickness: 0.6px;
+        text-underline-offset: 22px;
+        letter-spacing: 0.09px;
         font-weight: regular;
         font-size: 0.9em;
         position: relative;
@@ -166,21 +169,21 @@
 
       }
 
-    .view-portfolio a {
-        text-decoration: none;
+    .view-portfolio {
         position: relative;
         margin-top: 20px;
+        letter-spacing: 0.13px;
     }
     
-    .view-portfolio:hover::after a {
+    .view-portfolio:hover {
         content: '';
-        position: absolute;
+        position: relative;
         left: 0;
-        bottom: -5px; /* 5px distance from the text */
         width: 100%;
-        height: 10px; /* Thickness of the underline */
-        background-color: currentColor; /* Matches the text color */
+        font-style: oblique; /* Makes the text oblique on hover */
+        color:#737373;
     }
+
 
     /* Solid border */
     hr.solid {
@@ -478,6 +481,7 @@
             Scripting<br />
             Linux Administration<br />
             System Optimisation<br />
+            Infrastructure as Code<br />            
             CI/CD (Continuous Integration<br />
             and Continuous Deployment)<br />
             Monitoring<br />
@@ -526,7 +530,7 @@
                     <p style="line-height: 1.2;">Built and deployed a personal web portfolio with Python Flask</p>
                     <p style="line-height: 1.2;">Created metrics for cost and performance analysis of Azure services for cost and performance optimisation</p>
                     <p style="line-height: 1.2;">Utilised Git and GitHub for version control and effective collaboration</p>
-                &nbsp;<a href="#portfolio" class="view-portfolio"><p style="padding-top: 1.45em">&nbsp;<i>View Portfolio&nbsp; [ <span style="font-size: 1.2em; position: relative; top: 2px">* </span>Coming soon ]</i></p></a>
+                <a href="https://github.com/llanlan1" class="view-portfolio"><p style="padding-top: 1.25em; padding-left: 0.65em;">&nbsp;&nbsp;&nbsp;Explore my Github page</p></a>
                 </div>
 
 
@@ -606,7 +610,8 @@
             <h3>CONTACT</h3>
             <div class="mobile-text2"
             <span style="margin-left: -20px"><a href="mailto:llanlan91@gmail.com">llanlan91@gmail.com</a></span>
-            <a href="https://www.linkedin.com/in/llan">linkedin.com/in/llan</a></p>
+            <a href="https://www.linkedin.com/in/llan">linkedin.com/in/llan</a>
+            <a href="https://github.com/llanlan1">github.com/llanlan1</a>
             </div>
         </div>
             <p style="line-height: 6.99em">&nbsp</p> 

@@ -2,5 +2,5 @@ A personal, responsive website with visitor count, using python flask with datab
 
 
 ###Deployment
-http://lanlan91.pythonanywhere.com/
+https://lanlan91.pythonanywhere.com/
 
