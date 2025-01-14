@@ -33,9 +33,8 @@ def home():
 
     return render_template('portfoliobylan.html', visitor_count=visitor.count)
 
-# No need for this in deployment on PythonAnywhere
-if __name__ == '__main__':
-    app.run(debug=True)
+app.config['DEBUG'] = False
+
 
 def init_resources():
     # Code to initialize database connection or other resources
