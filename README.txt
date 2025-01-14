@@ -4,3 +4,5 @@ A personal, responsive website with visitor count, using python flask with datab
 ###Deployment
 https://lanlan91.pythonanywhere.com/
 
+###Internal Servor Error 500
+500.html
