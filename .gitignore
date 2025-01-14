@@ -1,0 +1,7 @@
+# Ignore the specific folders
+assets/archive/
+assets/archive2/
+
+# Keep other files and folders in assets/
+!assets/
+!assets/**/*

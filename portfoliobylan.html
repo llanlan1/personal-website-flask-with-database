@@ -47,6 +47,11 @@
         text-decoration: none;
     }
     
+    /* Hover Effect for Images */
+    img:hover {
+        transform: scale(1.05); /* Slight zoom effect */
+        transition: transform 0.3s ease; /* Smooth animation */
+        }
 
     body {
         margin: 0px;
@@ -93,7 +98,7 @@
     a {
         text-decoration: underline;
         text-decoration-thickness: 0.6px;
-        text-underline-offset: 22px;
+        text-underline-offset: 21.9px;
         letter-spacing: 0.09px;
         font-weight: regular;
         font-size: 0.9em;
@@ -169,6 +174,81 @@
 
       }
 
+    /* Add styles for the video grid */
+    .video-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 3 columns for desktop */
+        gap: 10px; /* Space between videos */
+        margin-left: 0px;
+        margin-top: 5px;
+        margin-right: -10px;
+        margin-bottom: 5px;
+    }
+
+    .video-description {
+        padding-left: 10px; /* Add left margin for descriptions */
+        text-align: left; /* Align text to the left */
+    }
+
+    .portfolio-video {
+        width: 100%; /* Full width of the container */
+        height: 264px; /* Fixed height for videos */
+        object-fit: cover; /* Cover the area, cropping as necessary */
+    }
+
+    .video-content {
+        display: flex; /* Use flexbox for content */
+        flex-direction: column; /* Stack description and link */
+        align-items: flex-start; /* Align content to the left */
+        margin-top: 0px; /* Space above the content */
+    }
+
+    .video-item {
+        display: flex; /* Use flexbox for alignment */
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the top-left */
+        justify-content: flex-start; /* Align items to the top */
+        height: 100%; /* Ensure full height */
+        padding: 0; /* Remove any padding */
+        margin-left: 20px;
+    }
+
+    @media (max-width: 768px) {
+        .video-grid {
+            grid-template-columns: 1fr; /* 1 column for mobile */
+            margin-left: 0px;
+        }
+
+        .portfolio-video {
+            width: 100%; /* Full width of the container */
+            height: 300px; /* Fixed height for videos */
+            object-fit: contain; /* Cover the area, cropping as necessary */
+        }
+
+        .video-content {
+            display: flex; /* Use flexbox for content */
+            flex-direction: column; /* Stack description and link */
+            align-items: flex-start; /* Align content to the left */
+            margin-top: 0px; /* Space above the content */
+        }
+    
+        .video-item {
+            display: flex; /* Use flexbox for alignment */
+            flex-direction: column; /* Stack items vertically */
+            align-items: start; /* Align items to the top-left */
+            justify-content: start; /* Align items to the top */
+            height: 100%; /* Ensure full height */
+            padding: 0; /* Remove any padding */
+            margin-left: 20px;
+            margin-right: 19px;
+        }
+
+        .video-description {
+            padding-left: 0px; /* Add left margin for descriptions */
+            text-align: left; /* Align text to the left */
+        }
+    }
+
     .view-portfolio {
         position: relative;
         margin-top: 20px;
@@ -220,45 +300,8 @@
     }
         
         
-        
-    
-    .coming-soon-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute; /* or fixed, depending on whether you want it to scroll with the page */
-        top: -2;
-        left: 20;
-        width: auto; /* Adjust the width if necessary */
-      }
       
-      .coming-soon {
-        font-size: 3rem;
-        font-weight: bold;
-        color: #333;
-        opacity: 0; /* Start with text invisible */
-        animation: fadeIn 3s forwards, slideUp 3s forwards; /* Apply the animation */
-      }
-      
-      /* Fade-in animation */
-      @keyframes fadeIn {
-        0% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
-      
-      /* Slide-up animation */
-      @keyframes slideUp {
-        0% {
-          transform: translateY(30px);
-        }
-        100% {
-          transform: translateY(0);
-        }
-      }
+
 
       .narrow-text-header {
         width: 100%;
@@ -280,22 +323,7 @@
 
 /* For tablet and iPad widths */
 @media (min-width: 768px) and (max-width: 1024px) {
-    .coming-soon-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute; /* or fixed, depending on whether you want it to scroll with the page */
-        left: 20;
-        width: auto; /* Adjust the width if necessary */
-    }
 
-    .coming-soon {
-        font-size: 3.6rem; /* 1.2 times larger than normal */
-        font-weight: bold;
-        color: #333;
-        opacity: 0; /* Start with text invisible */
-        animation: fadeIn 3s forwards, slideUp 3s forwards;
-    }
 
     .header a {
         text-decoration: none;
@@ -351,22 +379,6 @@
 
       @media (max-width: 480px) {
 
-        .coming-soon-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: absolute; /* or fixed, depending on whether you want it to scroll with the page */
-            left: 20;
-            width: auto; /* Adjust the width if necessary */
-          }
-          
-          .coming-soon {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #333;
-            opacity: 0; /* Start with text invisible */
-            animation: fadeIn 3s forwards, slideUp 3s forwards; /* Apply the animation */
-          }
 
         .header a {
             text-decoration: none;
@@ -412,7 +424,7 @@
         }  
 
         .narrow-text {
-            width: 65%;
+            width: 68%;
         }
 
         .mobile-text {
@@ -461,17 +473,115 @@
 
 </section>
 
+<p style="line-height: 0em" id="portfolio">&nbsp</p>
+
+<section class="mobile-width" style="margin-left: 0px">
+    <div>
+        <!-- grid for videos -->
+        <div class="video-grid" style="padding-top: 17em">
+            <div class="video-item">
+                <div class="video-content">
+                    <img src="/static/assets/1.gif" alt="E-commerce Marketplace Prototype" loading="lazy" style="max-width: 100%; height: auto;">
+                </div>
+                <p style="margin-left: 10px; padding-top: 10px; padding-bottom: 12px; font-size: 0.79em">Capstone Project: Cloud-Based E-commerce Prototype</p>
+                <p style="font-size: 1.1em; margin-left: 40px; padding-top: 10px; padding-bottom: 5px">Stella</p>
+                <p style="font-size: 0.8em; margin-left: 55px; padding-top: 2.4px; padding-bottom: 10px"><span style="letter-spacing: 0.04em;">&nbsp;Type</span><br />
+                &nbsp;Web App<br />
+                &nbsp;Database Management<br />
+                &nbsp;Team Collaboration<br />
+                <br>
+                <span style="letter-spacing: 0.04em;">&nbsp;Role</span><br />
+                &nbsp;Frontend<br />
+                &nbsp;Backend<br />
+                &nbsp;Azure Researcher<br />
+                &nbsp;<br />
+                &nbsp;<br />
+                &nbsp;<br />
+                <br>
+                </p>
+                <a href="https://github.com/llanlan1/e-commerce-marketplace-app-prototype" target="_blank" class="view-portfolio"><span style="letter-spacing: -0.004em; font-size: 0.97em;">&nbsp;View on GitHub</span></a>
+                <p style="line-height: 1.16em">&nbsp;</p>
+            </div>
+            <div class="video-item">
+                <div class="video-content">
+                    <img src="/static/assets/2.gif" alt="Playground: An Interactive Database-Backed Website" loading="lazy" style="max-width: 100%; height: auto;">
+                </div>
+                <p style="margin-left: 10px; padding-top: 10px; padding-bottom: 12px; font-size: 0.79em">Flask App: Interactive Database-Backed Website</p>
+                <p style="font-size: 1.1em; margin-left: 40px; padding-top: 10px; padding-bottom: 5px">Playground</p>
+                <p style="font-size: 0.8em; margin-left: 55px; padding-top: 2.4px; padding-bottom: 10px"><span style="letter-spacing: 0.04em;">&nbsp;Type</span><br />
+                &nbsp;Web App<br />
+                &nbsp;Database Integration<br />
+                &nbsp;Team Collaboration<br />
+                <br>
+                <span style="letter-spacing: 0.04em;">&nbsp;Role</span><br />
+                &nbsp;Frontend<br />
+                &nbsp;<br />
+                &nbsp;<br />
+                &nbsp;<br />
+                &nbsp;<br />
+                &nbsp;<br />
+                <br>
+                </p>
+                <a href="https://github.com/llanlan1/flask-website-with-database" target="_blank" class="view-portfolio"><span style="letter-spacing: -0.004em; font-size: 0.99em;">&nbsp;View on GitHub</span></a>
+                <p style="line-height: 1.16em">&nbsp;</p>
+            </div>
+            <div class="video-item">
+                <div class="video-content">
+                    <img src="/static/assets/3.gif" alt="Mini Project Series: A Collection of (Python) Scripts" loading="lazy" style="max-width: 100%; height: auto;">
+                </div>
+                <p style="margin-left: 10px; padding-top: 10px; padding-bottom: 12px; font-size: 0.79em">Mini Project Series: A Collection of (Python) Scripts</p>
+                <p style="font-size: 1.1em; margin-left: 40px; padding-top: 10px; padding-bottom: 5px">Miscellaneous</p>
+                <p style="font-size: 0.8em; margin-left: 55px; padding-top: 2.4px; padding-bottom: 10px"><span style="letter-spacing: 0.04em;">&nbsp;Type</span><br />
+                &nbsp;Python<br />
+                &nbsp;Scripting<br />
+                <br>
+                <span style="letter-spacing: 0.04em;">&nbsp;Role</span><br />
+                &nbsp;Creator<br />
+                &nbsp;<br />
+                &nbsp;<br />
+                &nbsp;<br />
+                &nbsp;<br />
+                &nbsp;<br />
+                &nbsp;<br />
+                <br>
+                </p>
+                <a href="https://github.com/llanlan1/mini-projects" target="_blank" class="view-portfolio"><span style="letter-spacing: -0.004em; font-size: 0.99em;">&nbsp;View on GitHub</span></a>
+                <p style="line-height: 1.16em">&nbsp;</p>
+            </div>
+            <div class="video-item">
+                <div class="video-content">
+                    <img src="/static/assets/4.gif" alt="Work in Progress: Cloud Resume Challenge" loading="lazy" style="max-width: 100%; height: auto;">
+                </div>
+                <p style="margin-left: 10px; padding-top: 10px; padding-bottom: 12px; font-size: 0.79em">Work in Progress: Cloud-Based Resume</p>
+                <p style="font-size: 1.1em; margin-left: 40px; padding-top: 10px; padding-bottom: 5px">Cloud Resume Challenge</p>
+                <p style="font-size: 0.8em; margin-left: 55px; padding-top: 2.4px; padding-bottom: 10px"><span style="letter-spacing: 0.04em;">&nbsp;Type</span><br />
+                &nbsp;Full Stack<br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<i>Frontend</i><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;<i>Backend</i><br />
+                &nbsp;Cloud-based<br />
+                &nbsp;Database Integration<br />
+                &nbsp;Automation<br />
+                &nbsp;CI/CD<br />
+                &nbsp;IaC<br />
+                <br>
+                <span style="letter-spacing: 0.04em;">&nbsp;Role</span><br />
+                &nbsp;Creator<br />
+                <br>
+                </p>
+                <a href="https://github.com/llanlan1/cloud-resume-challenge" target="_blank" class="view-portfolio"><span style="letter-spacing: -0.004em; font-size: 0.99em;">&nbsp;View on GitHub</span></a>
+                <p style="line-height: 1.16em">&nbsp;</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <section class="mobile-width" style="margin-left: 20px">
     <div>
-        <p style="line-height: 22em" id="portfolio">&nbsp</p>
-        <div class="coming-soon-container">
-            <h1 class="coming-soon">Portfolio—Coming Soon.<br>Watch this space&nbsp; .&nbsp; __&nbsp; .</h1>
-        </div>
-        <script src="coming-soon-animation.js"></script>
 
-        <p style="line-height: 6.4em" id="resume">&nbsp</p>
-        <p style="line-height: 16.34em">&nbsp</p>
+
+        <p style="line-height: 18.418em" id="resume">&nbsp</p>
+
 
         <h3 style="padding-bottom: 0.9px;">FUNCTIONAL SKILLS</h3>
             <p><strong>TECHNOLOGY</strong><strong></strong><br />
@@ -487,7 +597,7 @@
             Monitoring<br />
             Troubleshooting<br />
             Web Development<br />
-            UI (User-Interface Design)<br />
+            UI/UX<br />
             
             </p>
             
@@ -529,10 +639,10 @@
                 <div class="mobile-text">  
                     <p style="line-height: 0.25">&nbsp;</p>  
                     <p style="line-height: 1.2;">Designed and implemented a cloud-based e-commerce system with MySQL backend integration and system prototyping</p>
-                    <p style="line-height: 1.2;">Built and deployed a personal web portfolio with Python Flask</p>
                     <p style="line-height: 1.2;">Created metrics for cost and performance analysis of Azure services for cost and performance optimisation</p>
+                    <p style="line-height: 1.2;">Built and deployed a personal web portfolio with Python Flask & SQLAlchemy</p>
                     <p style="line-height: 1.2;">Utilised Git and GitHub for version control and effective collaboration</p>
-                <a href="https://github.com/llanlan1" class="view-portfolio"><p style="padding-top: 1.25em; padding-left: 0.65em;">&nbsp;&nbsp;&nbsp;Explore my Github page</p></a>
+                <a href="https://github.com/llanlan1" class="view-portfolio"><p style="padding-top: 1.25em; padding-left: 0.92em;">Explore my Github page</p></a>
                 </div>
 
 
@@ -613,18 +723,18 @@
             <div class="mobile-text2"
             <span style="margin-left: -20px"><a href="mailto:llanlan91@gmail.com">llanlan91@gmail.com</a></span>
             <a href="https://www.linkedin.com/in/llan">linkedin.com/in/llan</a>
-            <a href="https://github.com/llanlan1"><i>github.com/llanlan1</i></a>
+            <a href="https://github.com/llanlan1"><span style="letter-spacing: 0.005em; line-height: 1.3em; color:#202020"><i>github.com/llanlan1</i></span></a>
             </div>
         </div>
-            <p style="line-height: 6.99em">&nbsp</p> 
+            <p style="line-height: 6.57em">&nbsp</p> 
     </div>
 </section>
 
 <!-- Copyright -->
 <section class="mobile-width" style="margin-left: 20px">
     <div>
-        <p style="font-size: 0.25em">Copyright © Lan Lan &nbsp; All Rights Reserved
-        <span style="float: right; text-align: right; font-size: 0.54rem; padding-bottom: 11px; margin-right: 10px;">Total Visitor Count is {{ visitor_count }}&nbsp;&nbsp;</span>
+        <p style="font-size: 0.3em">Copyright © Lan Lan &nbsp; All Rights Reserved
+        <span style="float: right; text-align: right; font-size: 0.54rem; padding-bottom: 11.2px; margin-right: 10px;">Total Visitor Count is {{ visitor_count }}&nbsp;&nbsp;</span>
     </p>
         <p style="line-height: 0.1em">&nbsp</p>
     </div>
