@@ -1,4 +1,4 @@
-A personal, responsive website with visitor count, using python flask with database, HTML, inline css and javascript.
+A personal, responsive website with visitor count, using python flask with database, HTML, inline CSS and Javascript.
 
 
 ###Deployment
