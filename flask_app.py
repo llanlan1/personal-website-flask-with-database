@@ -33,6 +33,10 @@ def home():
 
     return render_template('portfoliobylan.html', visitor_count=visitor.count)
 
+@app.errorhandler(500)
+def internal_server_error(error):
+    return render_template('500.html'), 500
+
 app.config['DEBUG'] = False
 
 
